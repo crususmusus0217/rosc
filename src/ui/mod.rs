@@ -1,1 +1,3 @@
-//! Clinical HUD / graph visualization — later phases.
+//! Clinical HUD / graph visualization.
+
+pub mod view;

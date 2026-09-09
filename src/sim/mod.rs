@@ -1,3 +1,4 @@
+pub mod circuit;
 pub mod flow;
 pub mod graph;
 pub mod tick;

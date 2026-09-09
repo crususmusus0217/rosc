@@ -12,6 +12,15 @@ Engine: **Bevy 0.19.1 (Rust)**. Core sim: custom nodal / sparse `Ax=b` perfusion
 - Steady flow solve + **3-node closed-loop unit tests**
 - Empty `organs/` and `ui/` stubs
 
+## Phase 1 (perfusion view)
+
+`cargo run` shows a **3-node closed loop** (heart → capillary → vein → heart):
+
+- Edge strokes thicken with |flow|; color tracks O₂ (blue=low, warm=high)
+- Each circulation tick (250ms) spends ATP/O₂; at ATP=0 the pump **fails** (heart pressure collapses)
+- HUD (top-left) shows ATP, O₂, flow, tick count
+- Press **R** to refill ATP and restart the pump
+
 Not included yet: organ catalog, oral intake, lungs/liver/kidney, control circuits, immune TD, cerebrum / BBB.
 
 ## Requirements

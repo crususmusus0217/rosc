@@ -1,6 +1,7 @@
 use bevy::prelude::*;
 use bevy::window::WindowResolution;
 use rosc::sim::tick::SimTickPlugin;
+use rosc::ui::view::PerfusionViewPlugin;
 
 fn main() {
     App::new()
@@ -14,11 +15,6 @@ fn main() {
             ..default()
         }))
         .add_plugins(SimTickPlugin)
-        .add_systems(Startup, setup_scene)
+        .add_plugins(PerfusionViewPlugin)
         .run();
-}
-
-fn setup_scene(mut commands: Commands) {
-    commands.spawn(Camera2d);
-    info!("ROSC Phase 0 scaffold — empty scene, ticks running. See README.");
 }
