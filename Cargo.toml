@@ -2,14 +2,15 @@
 name = "rosc"
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.95"
 description = "ROSC — Return Of Spontaneous Circulation (Bevy perfusion sim scaffold)"
 license = "MIT"
 publish = false
 
 [dependencies]
 bevy = { version = "0.19.1", features = ["dynamic_linking"] }
-nalgebra = "0.33"
-nalgebra-sparse = "0.10"
+nalgebra = "0.34"
+nalgebra-sparse = "0.11"
 
 # 自分のコードは最適化なし（ブレークポイントが確実に効く）
 [profile.dev]
